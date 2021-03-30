@@ -16,11 +16,9 @@ namespace Benchmark
             var vm = dto.Adapt<CustomerVM>();
             Console.WriteLine("Full Name : " + vm.FullName);
 
-
             // dest check
             var dmObj = new CustomerVM();
             dto.Adapt(dmObj);
-
 
             // copy list object to list object
             var dtoList = new List<CustomerDto>
@@ -32,7 +30,6 @@ namespace Benchmark
 
             var vmList = dtoList.Adapt<List<CustomerVM>>();
             Console.WriteLine("List - Last Full name : " + vmList[2].FullName);
-
 
             var destVM = new List<CustomerVM>();
             dtoList.Adapt(destVM);
